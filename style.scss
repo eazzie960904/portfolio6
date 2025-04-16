@@ -1,0 +1,93 @@
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  padding: 0 50px;
+  .menu {
+    display: flex;
+    gap: 30px;
+    color: #ff4510;
+    font-size: 1.5em;
+    a {
+      cursor: pointer;
+    }
+  }
+  .portfolioLogo {
+    color: #fff;
+    font-size: 1.5em;
+    a {
+      cursor: pointer;
+    }
+  }
+}
+.main {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  .introCont {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    padding: auto;
+    .introContImg {
+      img {
+        width: 350px;
+        height: 450px;
+        border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+      }
+    }
+    .introContDesc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+      .introContDescSubT {
+        font-size: 1em;
+      }
+      .introConDescTit {
+        font-size: 1.2em;
+        font-weight: 650;
+        color: #eb6565;
+      }
+      .introMore {
+        width: 100px;
+        padding: 10px;
+        border: 1px solid #ff4510;
+        border-radius: 20px;
+        color: #ff4510;
+        cursor: pointer;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  header {
+    display: none;
+  }
+  .intro {
+    .introCont {
+      flex-direction: column-reverse;
+      text-align: center;
+      .introContDesc {
+        .introMore {
+          display: none;
+        }
+      }
+    }
+  }
+}
