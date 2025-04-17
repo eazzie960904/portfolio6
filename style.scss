@@ -75,6 +75,75 @@ header {
   }
 }
 
+.design {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .designOutLine {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+
+.flowers {
+  width: 100%;
+  img {
+    width: 100%;
+    height: 450px;
+  }
+}
+
+.insta {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  .instaText {
+    font-size: 2.5em;
+    font-weight: 500;
+    color: #ff4510;
+  }
+  a .instaID {
+    color: #ff4510;
+  }
+}
+
+.howto {
+  .howtoInner {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: #ff4510;
+    .howtoTitle {
+      font-size: 2.5em;
+    }
+    .howtoButton {
+      border: 1px solid #ff4510;
+      padding: 10px 30px;
+      border-radius: 20px;
+    }
+  }
+}
+
+.basket {
+  img {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 850px) {
   header {
     display: none;
