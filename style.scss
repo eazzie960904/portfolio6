@@ -63,13 +63,38 @@ header {
         color: #eb6565;
       }
       .introMore {
-        width: 100px;
-        padding: 10px;
-        border: 1px solid #ff4510;
-        border-radius: 20px;
-        color: #ff4510;
-        cursor: pointer;
-        text-align: center;
+        button {
+          width: 100px;
+          padding: 10px;
+          border: 1px solid #ff4510;
+          border-radius: 20px;
+          color: #ff4510;
+          cursor: pointer;
+          text-align: center;
+        }
+        .dialogInner {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .dialogContent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+              width: 200px;
+              height: 200px;
+            }
+            div {
+              text-align: center;
+            }
+          }
+        }
+        dialog::backdrop {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
       }
     }
   }
@@ -187,4 +212,49 @@ footer {
   }
   .intro {
     height: 50vh;
-   
+    .introCont {
+      width: 600px;
+      .introContImg {
+        img {
+          width: 200px;
+          height: 300px;
+        }
+      }
+      .introContDesc {
+        font-size: 0.8em;
+        .introMore {
+          display: none;
+        }
+      }
+    }
+  }
+  .design {
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .intro {
+    height: 80vh;
+    padding: 10px;
+    .introCont {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    display: none;
+  }
+  .intro {
+    height: 105vh;
+    .introCont {
+      text-align: center;
+      gap: 50px;
+    }
+  }
+}
