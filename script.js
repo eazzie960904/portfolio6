@@ -1,6 +1,6 @@
 let nav = document.querySelector("header nav");
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= 0) {
+  if (window.scrollY > 0) {
     nav.classList.add("active");
   } else {
     nav.classList.remove("active");

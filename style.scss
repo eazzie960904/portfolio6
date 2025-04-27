@@ -157,6 +157,26 @@ header {
   }
 }
 
+.html {
+  .htmlInner {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    .htmlColumn {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+}
+
 .howto {
   .howtoInner {
     height: 250px;
@@ -184,6 +204,11 @@ header {
 }
 
 .slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
   .slide_wrapper {
     position: relative;
     width: 660px;
@@ -200,6 +225,10 @@ header {
         background: #ccc;
         float: left;
         list-style: none;
+        img {
+          width: 200px;
+          height: 200px;
+        }
       }
       li:not(:last-child) {
         margin-right: 30px;
@@ -273,30 +302,4 @@ footer {
       .introContDesc {
         font-size: 0.8em;
         .introMore {
-          display: none;
-        }
-      }
-    }
-  }
-  .design {
-    overflow: hidden;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .intro {
-    height: 80vh;
-    padding: 10px;
-    .introCont {
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
-      gap: 50px;
-    }
-  }
-}
-
-@media screen and (max-width: 450px) {
-  header {
-    display: none;
-  }
+      
