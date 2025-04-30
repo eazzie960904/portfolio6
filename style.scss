@@ -36,6 +36,14 @@ header {
     }
   }
 }
+
+input {
+  display: none;
+}
+.sidebar {
+  display: none;
+}
+
 .main {
   img {
     width: 100%;
@@ -289,6 +297,78 @@ footer {
   header {
     display: none;
   }
+
+  input[id="menuicon"] {
+    display: none;
+  }
+
+  input[id="menuicon"] + label {
+    display: block;
+    width: 20px;
+    height: 15px;
+    position: fixed;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    span {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      border-radius: 30px;
+      background: #ff4510;
+      transition: all 0.35s;
+    }
+    :nth-child(1) {
+      top: 0;
+    }
+    :nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    :nth-child(3) {
+      bottom: 0;
+    }
+  }
+  input[id="menuicon"]:checked + label {
+    z-index: 2;
+    right: 310px;
+  }
+
+  input[id="menuicon"]:checked + label span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  input[id="menuicon"]:checked + label span:nth-child(2) {
+    opacity: 0;
+  }
+  input[id="menuicon"]:checked + label span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 300px;
+    height: 100%;
+    background: #ff4510;
+    padding-top: 30px;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 1;
+    color: #fff;
+    font-size: 2em;
+    transition: all 0.35s;
+  }
+  input[id="menuicon"]:checked + label + div {
+    right: 0;
+  }
+
   .intro {
     height: 50vh;
     .introCont {
