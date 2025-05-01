@@ -1,0 +1,93 @@
+header {
+  nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    padding: 0 50px;
+    transition: 0.4s;
+    color: #2fb9ef;
+    .menu {
+      display: flex;
+      gap: 30px;
+      font-size: 1.5em;
+      transition: 0.4s;
+      a {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .mainInner {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color: #2fb9ef;
+    text-align: center;
+    .mainTit {
+      font-size: 2em;
+    }
+  }
+}
+
+.album {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .albumInner {
+    display: flex;
+    gap: 30px;
+    padding: 50px;
+    color: #2fb9ef;
+    .albumBoxes {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .albumBox {
+        width: 350px;
+        height: 350px;
+        background: #eee;
+      }
+      .albumBoxesTit {
+        font-weight: 600;
+      }
+      .albumBoxesDesc {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  border-top: 1px solid #2fb9ef;
+  .footerInner {
+    width: 500px;
+    height: 40vh;
+    color: #2fb9ef;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+    .footerTit {
+      font-size: 2em;
+    }
+    .footerDesc {
+      display: flex;
+      gap: 50px;
+    }
+  }
+}
