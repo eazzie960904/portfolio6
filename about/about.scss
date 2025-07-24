@@ -62,6 +62,7 @@ input {
     }
     .mainDesc {
       width: 600px;
+      line-height: 150%;
     }
   }
   .mainDescImg {
@@ -194,5 +195,23 @@ footer {
   }
   input[id="menuicon"]:checked + label + div {
     right: 0;
+  }
+
+  .main {
+    .mainInner {
+      padding: 20px;
+      height: auto;
+      .mainDesc {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .mainPageMade {
+      flex-direction: column;
+      div {
+        width: 300px;
+        height: 300px;
+      }
+    }
   }
 }
